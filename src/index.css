@@ -1,14 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Italianno');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Italianno', cursive;
+  letter-spacing: 1.5px;
+  font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: rgb(247, 0, 74);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(247, 0, 74, 1) 0%,
+    rgb(192, 0, 144) 30%,
+    rgb(99, 0, 229) 70%,
+    rgba(0, 55, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(247, 0, 74, 1) 0%,
+    rgb(192, 0, 144) 30%,
+    rgb(99, 0, 229) 70%,
+    rgba(0, 55, 255, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(247, 0, 74, 1) 0%,
+    rgb(192, 0, 144) 30%,
+    rgb(99, 0, 229) 70%,
+    rgba(0, 55, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7004a', endColorstr='#0037ff',GradientType=1 );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  margin: 0;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+.slider {
+  position: relative;
+}
+
+.img-wrapper {
+  min-height: 560px;
+  max-height: 600px;
+  width: 100%;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0 auto;
+  display: block;
+  -webkit-box-shadow: 11px 11px 20px 0px rgba(63, 8, 73, 0.5);
+  -moz-box-shadow: 11px 11px 20px 0px rgba(63, 8, 73, 0.5);
+  box-shadow: 11px 11px 20px 0px rgba(63, 8, 73, 0.5);
+}
+
+.btns {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+}
+.btn {
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  line-height: 46px;
+  font-size: 25px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s all;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.btn:hover {
+  background-color: #30006e;
+}
+
+.btn.prev {
+  left: 0;
+}
+
+.btn.next {
+  right: 0;
+}
+
+.dots {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.dot {
+  background-color: #fff;
+  opacity: 0.5;
+  border: 0;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.7);
+}
+
+.dot.active {
+  opacity: 1;
 }
