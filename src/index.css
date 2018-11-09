@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Italianno', cursive;
+  font-family: 'Italianno', sans-serif;
   letter-spacing: 1.5px;
   font-size: 30px;
   -webkit-font-smoothing: antialiased;
@@ -44,6 +44,8 @@ h1 {
 
 .slider {
   position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .img-wrapper {
